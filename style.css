@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6E6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #E6E6E6;
+}
+
+/* First Section */
+.heroSection {
+    height: 100vh;
+    position: relative;
+}
+
+/* header section */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+    font-weight: 100;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.brandName {
+    left: 2rem;
+    font-weight: 100;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header li {
+    cursor: pointer;
+}
+/* end of header section */
+
+/* website heading of hero section */
+.websiteHeading {
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+    width: 48rem;
+    cursor: default;
+    overflow: hidden;
+}
+
+.websiteHeading p:first-child {
+    font-size: 2.375rem;
+    margin: 0;
+}
+
+.websiteHeading p:last-child {
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 900;
+    display: inline-block;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.containerForBorderLine {
+    border-top: 2px solid black;
+    margin-top: -1.3rem;
+    padding-top: 1.3rem;
+    width: 50rem;
+}
+
+.briefOverview {
+    position: absolute;
+    font-size: 1.375rem;
+    margin-top: 26rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: justify;
+    line-height: 2rem;
+    overflow: hidden;
+    cursor: default;
+}
+
+.logo img {
+    border-radius: 50%;
+    position: absolute;
+    width: 22rem;
+    height: 22rem;
+    margin-left: 3.4rem;
+    bottom: 2rem;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.6));
+}
+
+.brandNameEndOfSection {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.brandNameEndOfSection p:first-child {
+    overflow: hidden;
+}
+
+body.dark-mode .heroSection,
+body.dark-mode header,
+body.dark-mode .brandName,
+body.dark-mode ul,
+body.dark-mode li,
+body.dark-mode p,
+body.dark-mode i,
+body.dark-mode a,
+body.dark-mode footer,
+body.dark-mode span,
+body.dark-mode .websiteHeading,
+body.dark-mode .containerForBorderLine,
+body.dark-mode .briefOverview,
+body.dark-mode .logo img {
+    background-color: black;
+}
+
+body.dark-mode .containerForBorderLine {
+    border-top: 2px solid #E6E6E6;
+}
+/* End of hero section */
+
+/*Section 2, consists of about me title and about me description and profile image */
+.aboutMeSection {
+    height: 300vh;
+    position: relative;
+    cursor: default;
+}
+
+.sectionTitle p {
+    display: flex;
+    justify-content: center;
+    margin-top: 32rem;
+    font-size: 12.5rem;
+    font-weight: 900;
+    z-index: -1;
+}
+
+.profileContainer {
+    background-color: #bc0000;
+    width: 24.625rem;
+    height: 30.125rem;
+    overflow-y: hidden;
+    position: absolute;
+    margin-left: 48rem;
+    top: 44rem;
+    filter: drop-shadow(10px 10px 18px rgba(0, 0, 0, 0.4));
+}
+
+.senPhoto {
+    background: transparent;
+    width: 24rem;
+    height: 34rem;
+    margin-top: -3rem;
+    margin-left: 0.5rem;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.6));
+}
+
+.aboutMeDescription {
+    position: absolute;
+    top: 84rem; /* or use `margin-top` if `position: relative` */
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 46.25rem;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+body.dark-mode .aboutMeSection,
+body.dark-mode .sectionTitle {
+    background-color: black;
+}
+/* end of section 2 */
+
+/* section 3 contains skillset */
+.skillsSection {
+    position: relative;
+    height: 300vh;
+    cursor: default;
+}
+
+.skillSectionTitle {
+    font-size: 12.5rem;
+    font-weight: 900;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* Center it if block-level */
+    margin-top: 16rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skillsetWrapper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 4rem; /* Optional spacing between cards */
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 0 4rem;
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+.skillCards {
+    width: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.skillName {
+    font-size: 3.75rem;
+    overflow: hidden;
+}
+
+.skillDescriptionContainer {
+    font-size: 1.75rem;
+    border-block: 2px solid black;
+    padding-block: 2rem;
+    margin-top: -1rem;
+}
+
+body.dark-mode .skillsSection,
+body.dark-mode .skillSectionTitle,
+body.dark-mode .skillsetWrapper,
+body.dark-mode .skillCards,
+body.dark-mode .skillName,
+body.dark-mode .skillNameBg,
+body.dark-mode .skillDescriptionContainer {
+    background-color: #000;
+}
+
+body.dark-mode .skillDescriptionContainer {
+        border-block: 2px solid #e6e6e6;
+}
+/* End of skillset Section*/
+
+/*Styling for career highlights section */
+.careerHighlightsSection {
+    position: relative;
+    background-color: #E6E6E6;
+    overflow: hidden;
+    overflow-x: visible;
+}
+
+.innerContainer {
+    padding: 4rem;
+    background-color: transparent;
+}
+
+.careerSectionTitle {
+    font-size: 8.5rem;
+    font-weight: 900;
+    overflow: hidden;
+}
+
+.horizontalScrollWrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -2rem;
+}
+
+.displayCareerHighlights {
+    background-color: transparent;
+    display: flex;
+    width: max-content;
+    height: 100%;
+    gap: 4rem;
+    margin-left: 2rem;
+}
+
+.highlightCards {
+    min-width: 80vw;
+    flex-shrink: 0;
+    background: #E6E6E6;
+    padding: 2rem;
+    display: flex;
+    gap: 4rem;
+    margin-top: -2rem;
+}
+
+.highlightImg img {
+    width: 60rem;
+    height: 42rem;
+    filter: drop-shadow(0px -12px 16px rgba(0, 0, 0, 0.4));
+}
+
+.highlightDetailsContainer {
+    display: flex;
+    gap: 10rem;
+}
+
+.highlightInfo {
+    display: block;
+}
+
+.highlightInfo p:nth-child(1) {
+    margin-top: 10rem;
+    font-size: 4rem;
+    margin-bottom: 14rem;
+    font-weight: 900;
+    overflow: hidden;
+}
+
+.highlightInfo p {
+    font-size: 1.5rem;
+}
+
+.highlightDescription {
+    width: 80rem;
+    margin-top: 1.5rem;
+    font-size: 1.375rem;
+    text-align: justify;
+}
+
+body.dark-mode .careerHighlightsSection,
+body.dark-mode .innerContainer,
+body.dark-mode .careerSectionTitle,
+body.dark-mode .horizontalScrollWrapper,
+body.dark-mode .displayCareerHighlights,
+body.dark-mode .highlightCards,
+body.dark-mode .highlightImg,
+body.dark-mode .highlightDetailsContainer,
+body.dark-mode .highlightInfo,
+body.dark-mode .highlightDescription {
+    background-color: #000;
+}
+/* End of career Highlights Section */
+
+/* services offered section */
+.serviceSection {
+    height: 180vh;
+    margin-top: 10rem;
+}
+
+.serviceSectionTitle {
+    font-size: 12.5rem;
+    font-weight: 900;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* Center it if block-level */
+    margin-top: 16rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.servicesCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #E6E6E6;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.servicesCard p {
+    font-size: 4.8em;
+    font-weight: 900;
+    overflow: hidden;
+}
+
+/* Hide details by default */
+.serviceDetailsWrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    border-top: 2px solid black;
+    padding-top: 2rem;
+}
+
+.serviceDetailsWrapper p {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+/* On hover, expand the details */
+.servicesCard:hover .serviceDetailsWrapper {
+  height: 6rem; /* Adjust based on expected content height */
+}
+
+body.dark-mode .serviceSection,
+body.dark-mode .serviceSectionTitle,
+body.dark-mode .servicesContainer,
+body.dark-mode .servicesCard,
+body.dark-mode .serviceDetailsWrapper {
+    background-color: #000;
+}
+
+body.dark-mode .serviceDetailsWrapper {
+    border-top: 2px solid #E6E6E6;
+}
+/* End of services section styling */
+
+/* Wrapper for the entire footer section */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer to the bottom */
+    align-items: center;
+    min-height: 100vh;
+    background-color: #bc0000;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+}
+
+/* Middle Content: Call to Action + Contact Info */
+.footer > .contactsInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: #E6E6E6;
+}
+
+.callToActionWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #bc0000;
+    border-bottom: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    overflow: none;
+    margin-top: 10rem;
+}
+
+.footerLogo {
+    flex-shrink: 0;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footerLogo img.whiteLogo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #bc0000;
+}
+
+.callToActionStmt {
+    color: #E6E6E6;
+    font-size: 3.75rem;
+    line-height: 1.2;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* Contact Info */
+.contactsInfo {
+    font-size: 1.25rem;
+    color: #E6E6E6;
+    margin-top: -18rem;
+    margin-left: 56rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contactsInfo i {
+    background-color: #bc0000;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5rem;
+    overflow: hidden;
+}   
+
+.contactsInfo p {
+    background-color: #bc0000;
+}
+
+/* bottom footer */
+footer {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 4rem; /* space from the sides */
+    box-sizing: border-box;
+    background-color: #bc0000;
+    color: #E6E6E6;
+    border-top: 2px solid #E6E6E6;
+    overflow: hidden;
+}
+
+.footerContents, .navbuttons {
+    display: flex;
+    flex-direction: column;
+     /* control spacing between lines */
+    font-size: 0.875rem; /* optional: smaller font to fit */
+}
+
+.footerContents {
+    flex: 1;
+    max-width: 50%;
+    background-color: #bc0000;
+    margin-top: 2.6rem;
+}
+
+.footerContents p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    background-color: #bc0000;
+}
+
+.navbuttons {
+    text-align: right;
+    background-color: #bc0000;
+    display: flex;
+    margin-top: -1.1rem;
+}
+
+.navbuttons p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    background-color: #bc0000;
+    margin-right: 19.5rem;
+}
+
+.navbuttons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    align-items: flex-end;
+    background-color: #bc0000;
+}
+
+.navbuttons li {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    background-color: #bc0000;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 1rem;
+}
+
+a {
+    background-color: #bc0000;
+    text-decoration: none;
+    color: inherit;
+}
+
+body.dark-mode .footer,
+body.dark-mode .callToActionWrapper,
+body.dark-mode .footerLogo img,
+body.dark-mode .callToActionStmt,
+body.dark-mode .contactsInfo
+body.dark-mode footer,
+body.dark-mode .footerContents,
+body.dark-mode .navbuttons {
+    background-color: #000;
+}
+
+body.dark-mode .redOnDM {
+    color: #bc0000;
+}
+
+
+
+
+

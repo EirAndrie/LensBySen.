@@ -1,0 +1,37 @@
+/* style for reveal each letter on scroll */
+.revealOnScrollEachLetter {
+    background: transparent;
+}
+
+.revealOnScrollEachLetter span {
+    background: transparent;
+    overflow: visible;
+    display: inline-block; /* Needed for GSAP y movement */
+    will-change: transform, opacity;
+}
+
+.revealOnScrollEachLetter br {
+    display: flex;
+    content: "";
+}
+
+/* style for slide in animation */
+.slideInAnimation {
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    perspective: 800px;
+}
+
+/* style for magnetic element follow on mousemove */
+.magnetic {
+    display: inline-block;
+    overflow: hidden;
+    cursor: default;
+}
+
+.magnetic span,
+.magnetic img {
+    display: inline-block;
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+}
