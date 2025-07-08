@@ -258,9 +258,10 @@ body.dark-mode .skillDescriptionContainer {
 }
 
 body.dark-mode .skillDescriptionContainer {
-        border-block: 2px solid #e6e6e6;
+    border-block: 2px solid #e6e6e6;
 }
 /* End of skillset Section*/
+
 
 /*Styling for career highlights section */
 .careerHighlightsSection {
@@ -289,57 +290,101 @@ body.dark-mode .skillDescriptionContainer {
 }
 
 .displayCareerHighlights {
-    background-color: transparent;
     display: flex;
-    width: max-content;
-    height: 100%;
-    gap: 4rem;
-    margin-left: 2rem;
+    gap: 1rem;
+    height: 52rem;
+    padding-right: 2rem;
 }
 
 .highlightCards {
-    min-width: 80vw;
-    flex-shrink: 0;
-    background: #E6E6E6;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    transition: flex-grow 0.8s ease;
+    min-width: 0;
+    overflow: hidden;
+    background: transparent;
     padding: 2rem;
+}
+
+.highlightCards:hover {
+    flex: 20;
+}
+
+.highlightLeftSide {
     display: flex;
-    gap: 4rem;
-    margin-top: -2rem;
+    flex-direction: column;
+    width: 40rem;
+    flex-shrink: 0;
+    height: 60rem;
+    background-color: transparent;
 }
 
-.highlightImg img {
-    width: 60rem;
-    height: 42rem;
-    filter: drop-shadow(0px -12px 16px rgba(0, 0, 0, 0.4));
-}
-
-.highlightDetailsContainer {
-    display: flex;
-    gap: 10rem;
-}
-
-.highlightInfo {
-    display: block;
-}
-
-.highlightInfo p:nth-child(1) {
-    margin-top: 10rem;
-    font-size: 4rem;
-    margin-bottom: 14rem;
-    font-weight: 900;
+.highlightImg {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
     overflow: hidden;
 }
 
-.highlightInfo p {
-    font-size: 1.5rem;
+.highlightImg img {
+    display: block;
+    width: 100%;
+    height: 48rem;
+    object-fit: cover;
+    filter: grayscale(80%);
+    opacity: 0.2;
+    transition: all 1s ease;
 }
 
-.highlightDescription {
-    width: 80rem;
-    margin-top: 1.5rem;
-    font-size: 1.375rem;
+.highlightCards:hover .highlightImg img {
+    height: 40rem;
+    transition: all 1s ease;
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.chapterLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 100;
+    background-color: transparent;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.highlightCards:hover .chapterLabel {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.highlightInfo {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 2rem;
+}
+
+.highlightCards:hover .highlightInfo {
+    opacity: 1;
+}
+
+.highlightDetailsContainer {
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+    padding-left: 2rem;
+    overflow-y: hidden;
     text-align: justify;
 }
+
+.highlightCards:hover .highlightDetailsContainer {
+    opacity: 1;
+}
+
 
 body.dark-mode .careerHighlightsSection,
 body.dark-mode .innerContainer,
