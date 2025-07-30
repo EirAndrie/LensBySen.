@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="gsapStyling.css">
+        <link rel="icon" type="image/png" href="lensBySenWebIcon.ico">
     </head>
 
     <body>
@@ -18,6 +19,7 @@
                 <ul>
                     <li class="revealOnScroll" data-delay="0.2"><a href="#About" style="background-color: transparent;">About</a></li>
                     <li class="revealOnScroll" data-delay="0.3"><a href="#Services" style="background-color: transparent;">Services</a></li>
+                    <li class="revealOnScroll" data-delay="0.3"><a href="#Gallery" style="background-color: transparent;">Gallery</a></li>
                     <li class="revealOnScroll" data-delay="0.5"><a href="#Contacts" style="background-color: transparent; margin-right: 4rem;">Contact</a></li>
                     <li class="revealOnScroll" data-delay="0.6" id="darkModeToggle">DarkMode</li>
                 </ul>
@@ -430,6 +432,49 @@
     </section>
     <!--End of services section-->
 
+    <!--Works showcase section-->
+    <section class="projectsSection revealOnScroll" data-delay="0.8" id="Gallery">
+        <p class="galleryTitle revealOnScrollEachLetter" data-delay="1">GALLERY</p>
+        <div class="galleryGridWrapper">
+            <div class="galleryGrid">
+                <!--First Column-->
+                <div class="column">
+                    <div class="photo"><img src="./VerticalImg_1.JPG" alt="Img"></div>
+                    <div class="photo"><img src="./SquareImg_1.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./HorizontalImg_1.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./VerticalImg_2.JPG" alt="Img"></div>
+                </div>
+                <!--Second Column-->
+                <div class="column">
+                    <div class="photo "><img src="./HorizontalImg_2.JPG" alt="Img"></div>
+                    <div class="photo "><img src="./SquareImg_2.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./VerticalImg_3.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./SquareImg_4.JPG"></div>
+                    <div class="photo hidden"><img src="HorinzontalImg_5.JPG"></div>
+                </div>
+                <!--Third Column-->
+                <div class="column">
+                    <div class="photo "><img src="./SquareImg_3.JPG" alt="Img"></div>
+                    <div class="photo "><img src="./VerticalImg_4.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./HorizontalImg_3.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./VerticalImg_5.JPG" alt="Img"></div>
+                    <div class="photo hidden"><img src="./HorizontalImg_4.JPG"></div>
+                </div>
+            </div>
+            <div class="gallery-fade"></div>
+            <button id="seeMoreBtn" class="seeMoreBtn">See More</button>
+            <script>
+                document.getElementById('seeMoreBtn').addEventListener('click', function() {
+                    document.querySelectorAll('.galleryGrid .hidden').forEach(function(item) {
+                        item.classList.remove('hidden', 'fade-preview');
+                    });
+                    document.querySelector(".gallery-fade").style.display = 'none';
+                    this.style.display = 'none'; // Hide the button after clicking
+                });
+            </script>
+        </div>
+    </section>
+
     <!--Footer Section-->
     <section class="footer" id="Contacts">
         <section class="callToActionWrapper revealOnScroll">
@@ -446,7 +491,7 @@
             <a href="https://www.instagram.com/sensairaaa?igsh=MXB3dmR3a3ptMXF3dw==">
                 <i class="fa-brands fa-square-instagram" style="color: #E6E6E6;"></i>
             </a>
-            <a href="">
+            <a href="https://www.tiktok.com/@lens.by.sen?_t=ZS-8xJ0My4U8F2&_r=1">
                 <i class="fa-brands fa-tiktok" style="color: #E6E6E6;"></i>
             </a>
         </section>
@@ -462,7 +507,7 @@
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Services">Services</a></li>
-                    <li>Contact</li>
+                    <li><a href="#Gallery">Gallery</a></li>
                 </ul>
             </section>
         </footer>
