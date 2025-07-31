@@ -47,7 +47,7 @@
                 <img src="./RED LOGO.png" class="slideInAnimation magnetic"  data-x="-40"
                                                                                             data-y="0"
                                                                                             data-z="400"
-                                                                                            data-scale="1.1"
+                                                                                            data-scale="1.05"
                                                                                             data-delay="0.2"
                                                                                             data-pause="0"
                                                                                             data-duration="0.8"
@@ -172,7 +172,7 @@
                 <p class="skillName"><span style="padding: 1px;">Directing <span style="color: #bc0000;">Short Films</span></span></p>
                 <div class="skillDescriptionContainer">
                     <p>
-                        Planning and guiding visual storytelling for short film projects. In the Making.
+                        Planning and guiding visual storytelling for short film projects, coming soon.
                     </p>
                 </div>
             </div>
@@ -363,27 +363,8 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script>
-        //horizontal scroll
-        const highlights = document.querySelector(".displayCareerHighlights");
-        const section = document.querySelector(".careerHighlightsSection");
-
-        gsap.to(highlights, {
-            x: () => -(highlights.scrollWidth - window.innerWidth),
-            ease: "none",
-            scrollTrigger: {
-                trigger: section,
-                start: "top top",
-                end: () => "+=" + (highlights.scrollWidth - window.innerWidth),
-                scrub: true,
-                pin: true,
-                pinSpacing: true,
-                anticipatePin: 1,
-            }
-        });
-    </script>
     <!--End of career highlight section-->
-    
+
 
     <!--Services Section-->
     <section class="serviceSection" id="Services">
@@ -412,7 +393,7 @@
                 <p class="revealOnScrollEachLetter" data-delay="0.4">Event <span style="color: #bc0000">Videography</span></p>
                 <div class="serviceDetailsWrapper">
                     <p style="font-size: 1.2rem;"><i>(ft. JYMZ Films if needed)</i></p>
-                    <p>Recording full event coverage with cinematic angles and real-time storytelling.</p>
+                    <p>Capturing the highlights and key moments of events with cinematic shots and storytelling.</p>
                 </div>
             </div>
             <div class="servicesCard">
@@ -478,12 +459,12 @@
     <!--Footer Section-->
     <section class="footer" id="Contacts">
         <section class="callToActionWrapper revealOnScroll">
-            <div class="footerLogo magnetic" data-strength="6">
+            <div class="footerLogo">
                 <img src="./WHITE LOGO.png" class="whiteLogo">
             </div>
             <p class="callToActionStmt revealOnScrollEachLetter" style="background-color: transparent;">Every Story Deserves to be Seen.<br><span class="redOnDM">Let's Tell Yours.</span></p>
         </section>
-        <section class="contactsInfo revealOnScroll">
+        <div class="contactsInfo revealOnScroll">
             <p>lensbysen@gmail.com</p>
             <a href="https://www.facebook.com/share/1AmxFVdc7p/">
                 <i class="fa-brands fa-square-facebook" style="color: #E6E6E6;"></i>
@@ -494,14 +475,14 @@
             <a href="https://www.tiktok.com/@lens.by.sen?_t=ZS-8xJ0My4U8F2&_r=1">
                 <i class="fa-brands fa-tiktok" style="color: #E6E6E6;"></i>
             </a>
-        </section>
+        </div>
         <footer>
             <section class="footerContents">
                 <p>© 2025 LensBySen | Photographer & Videographer | All Rights Reserved</p>
                 <p>Built with Passion & Lots of Coffee:> by <a href="https://eirandrie.github.io/codeWithHrieu/index.html">codeWithHrieu</a></p>
                 <p>Lapu-lapu City, Cebu Philippines, 6015</p>
             </section>
-            <section class="navbuttons">
+            <div class="navbuttons">
                 <p>Navigation:</p>
                 <ul>
                     <li><a href="#Home">Home</a></li>
@@ -509,7 +490,7 @@
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#Gallery">Gallery</a></li>
                 </ul>
-            </section>
+            </div>
         </footer>
     </section>
     <!--More sections to be added-->
